@@ -1,0 +1,28 @@
+.footer {
+  background-color: var(--color-primary);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--color-white);
+}
+
+.footer span {
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+.footer-rrss {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-rrss img {
+  width: 40px;
+  margin: 20px;
+}
+
+.footer-copy {
+  font-size: 1.2rem;
+}

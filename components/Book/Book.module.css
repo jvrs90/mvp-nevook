@@ -1,0 +1,12 @@
+.book {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.cover picture img {
+  border-radius: var(--border-radius-sm);
+}
+
+.info {
+}

@@ -1,0 +1,118 @@
+.book {
+}
+.book h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.book-info {
+  background-color: var(--color-white);
+  padding: 10px;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.book-info__author {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+.book-info__author span {
+  color: var(--color-gray-500);
+}
+.book-info__genre {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+.book-info__genre span {
+  color: var(--color-gray-500);
+}
+.book-info__sinopsis {
+  margin: 10px 0;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: var(--color-dark);
+}
+.book-info__sinopsis span {
+  color: var(--color-gray-500);
+}
+
+.book-button {
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+/* Media queries */
+@media only screen and (min-width: 768px) {
+  .book {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    min-height: 100%;
+    justify-content: center;
+  }
+  .book img {
+    border-radius: 1rem;
+    min-width: 100%;
+    display: flex;
+  }
+  .book-info {
+    background-color: var(--color-white);
+    padding: 10px;
+    border-radius: 1rem;
+  }
+  .book-info__author {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  .book-info__genre {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  .book-info__sinopsis {
+    margin: 10px 0;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: var(--color-dark);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .book {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    min-height: 100%;
+    justify-content: center;
+  }
+  .book img {
+    border-radius: 1rem;
+    min-width: 100%;
+    display: flex;
+  }
+  .book-info {
+    background-color: var(--color-white);
+    padding: 10px;
+    border-radius: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .books-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    min-height: 100%;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .books-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    min-height: 100%;
+    justify-content: center;
+  }
+}

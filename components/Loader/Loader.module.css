@@ -1,0 +1,13 @@
+.loader-container {
+  background-color: var(--color-brand-cadet-blue);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
