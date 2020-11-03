@@ -1,6 +1,6 @@
 .bookCollection {
   display: flex;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   overflow: hidden;
 }
 .bookCollection input {

@@ -29,7 +29,7 @@ const Book = ({ book }) => {
 				book ?
 					(
 						<>
-							<div className={'container', styles['book']}>
+							<div className={styles['book']}>
 								<img onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/250x300" }} src={book.coverUrl} alt={`Portada de libro ${book.title} de ${book && book.author.map(author => author.authorName)} en Nevook`} />
 								<div className={styles['book-info']}>
 									<h2>{book && book.title}</h2>

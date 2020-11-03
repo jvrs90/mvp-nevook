@@ -2,7 +2,11 @@ import Container from '../Container'
 import Link from 'next/link'
 
 import style from './Navbar.module.css'
+
 const Navbar = () => {
+	const showModal = () => {
+		console.log('Modal')
+	}
 	return (
 		<>
 			<nav className={style.navbar}>
@@ -17,12 +21,14 @@ const Navbar = () => {
 								<li>
 									<Link href="/search">Búsqueda</Link>
 								</li>
+								<li>
+									<Link href="/book-not-found">¿No has encontrado un libro?</Link>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</Container>
 			</nav>
-
 		</>
 	)
 }

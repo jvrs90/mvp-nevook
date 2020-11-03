@@ -8,11 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@palmabit/react-cookie-law": "^0.4.0",
     "axios": "^0.21.0",
     "classnames": "^2.2.6",
     "minireset.css": "^0.0.6",
     "next": "10.0.0",
     "react": "17.0.1",
+    "react-cookie-consent": "^6.0.0",
     "react-dom": "17.0.1",
     "react-hook-form": "^6.10.1"
   }

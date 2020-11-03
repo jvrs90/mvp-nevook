@@ -1,5 +1,7 @@
 import styles from './BookCollection.module.css'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+
 
 export default function BookCollection({ title, authorName, genreName, slug, coverUrl }) {
 	const router = useRouter();
@@ -10,7 +12,7 @@ export default function BookCollection({ title, authorName, genreName, slug, cov
 					<div>
 						<img
 							src={coverUrl} onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/250x300" }}
-							alt={`Portada de libro ${title} de ${authorName} en Nevook`} />
+							alt={`Portada de libro ${title} de ${authorName} en Nevook`} width={200} height={300} />
 					</div>
 					<div className={styles.bookInfo}>
 						<div> {title} </div>
