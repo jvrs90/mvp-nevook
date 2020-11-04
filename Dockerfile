@@ -1,19 +1,15 @@
-# Dockerfile
-
-# base image
 FROM node:12
 
-# create & set working directory
-RUN mkdir -p /usr/src
-WORKDIR /usr/src
+# COPY [".", "/usr/src/"]
+COPY ["package.json", "package-lock.json", "/usr/src/"]
 
-# copy source files
-COPY . /usr/src
+# seria lo mismo que hacer cd project, pero dentro del contexto de Docker
+WORKDIR "/usr/src"
 
-# install dependencies
-RUN npm install
+RUN ["npm", "install"]
 
-# start app
-RUN npm run build
+COPY [".", "/usr/src/"]
+
 EXPOSE 3000
-CMD npm run start
+CMD ["npm", "run", "build"]
+CMD ["npm", "run", "start"]
