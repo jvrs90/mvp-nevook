@@ -12,7 +12,7 @@ RUN npm install --global pm2
 COPY ./package*.json ./
 
 # Install dependencies
-CMD ["npm", "install"]
+RUN ["npm", "install", "--only=production"]
 
 # Copy all files
 COPY ./ ./
@@ -29,3 +29,15 @@ USER node
 
 # Run npm start script with PM2 when container starts
 CMD [ "pm2-runtime", "npm", "--", "start" ]
+
+# /////////////////////////////////////////////////////////////////////////////////////////
+
+FROM node:alpine
+
+LABEL maintainer="Jose"
+
+WORKDIR /frontend
+COPY package*.json ./
+RUN npm install --only=production
+COPY . .
+RUN npm run build:prod

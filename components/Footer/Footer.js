@@ -7,7 +7,7 @@ function Footer() {
 		<>
 			<footer className={styles['footer']}>
 				<div style={{ color: 'white', fontSize: '2em', fontWeight: 'bold', textAlign: 'center', marginBottom: '10px' }}>  Nevook </div>
-				Si tienes alguna sugerencia puede decírnoslo a través del siguiente correo electrónico{" "}
+				Si tienes alguna sugerencia puedes decírnoslo a través del siguiente correo electrónico{" "}
 				<span>admin@nevook.com</span>
 				<div className={styles['footer-message']}>
 					<small>Tenemos muchas actualizaciones que ofreceros. Apóyanos compartiendo en redes sociales</small>

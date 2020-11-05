@@ -1,8 +1,11 @@
-.git/
-.gitignore
-.next/                # Existing Next.js builds
+# ./frontend/.dockerignore
+
+# Files
 .dockerignore
 Dockerfile
-docker-compose.yml
-node_modules/         # Installed inside container
-nginx/
+*.log
+
+# Folders
+.cache/
+node_modules/
+build/
