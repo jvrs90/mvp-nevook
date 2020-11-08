@@ -30,6 +30,21 @@ class MyDocument extends Document {
 						gtag('config', 'G-LZ2JKDZZSZ');`
 					}} />
 					{/* <!-- End Google Analytics --> */}
+					<meta name="description" content="📒📘 Nevook será una red social para unir amantes de la lectura. Podrás tener un control sobre los libros que has leído estás leyendo 📚 y te ayudará a encontrar tu 🔜 próxima lectura" />
+
+					{/* <!-- Open Graph / Facebook --> */}
+					<meta property="og:type" content="website" />
+					<meta property="og:url" content="https://nevook.com/" />
+					<meta property="og:title" content="Inicio | Nevook" />
+					<meta property="og:description" content="📒📘 Nevook será una red social para unir amantes de la lectura. Podrás tener un control sobre los libros que has leído estás leyendo 📚 y te ayudará a encontrar tu 🔜 próxima lectura" />
+					<meta property="og:image" content="/logoBlancoTransparente.png" />
+
+					{/* <!-- Twitter --> */}
+					<meta property="twitter:card" content="summary_large_image" />
+					<meta property="twitter:url" content="https://nevook.com/" />
+					<meta property="twitter:title" content="Inicio | Nevook" />
+					<meta property="twitter:description" content="📒📘 Nevook será una red social para unir amantes de la lectura. Podrás tener un control sobre los libros que has leído estás leyendo 📚 y te ayudará a encontrar tu 🔜 próxima lectura" />
+					<meta property="twitter:image" content="/logoBlancoTransparente.png"></meta>
 					<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600;700&display=swap" rel="stylesheet" />
 				</Head>
 				<body>
