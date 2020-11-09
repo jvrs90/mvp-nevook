@@ -17,6 +17,11 @@ services:
     restart: unless-stopped
     command: /bin/sh -c "while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g 'daemon off;'" # 💡
 
+  nextjs:
+    build: ./
+    networks:
+      - nginx_net
+
   certbot:
     container_name: certbot
     image: certbot/certbot
