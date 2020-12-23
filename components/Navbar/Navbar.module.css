@@ -14,9 +14,24 @@
   display: flex;
   align-items: center;
 }
-.menu ul li {
-  margin: 0 5px;
+
+@media only screen and (max-width: 768px) {
+  .menu ul {
+    display: inline-block;
+    text-align: center;
+  }
 }
+
+.menu ul li {
+  margin: 0 10px;
+}
+
+@media only screen and (max-width: 768px) {
+.menu ul li {
+  margin: 10px 0;
+}
+}
+
 
 .menu ul li a {
   color: white;

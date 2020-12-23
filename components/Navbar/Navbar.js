@@ -19,10 +19,10 @@ const Navbar = () => {
 									<Link href="/">Inicio</Link>
 								</li>
 								<li>
-									<Link href="/search">Búsqueda</Link>
+									<Link href="/buscar">Búsqueda</Link>
 								</li>
 								<li>
-									<Link href="/book-not-found">¿No has encontrado un libro?</Link>
+									<Link href="/libro-no-encontrado">¿No has encontrado un libro?</Link>
 								</li>
 							</ul>
 						</div>
