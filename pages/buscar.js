@@ -19,7 +19,7 @@ const Search = () => {
 
 	const onSubmit = async (data) => {
 		router.push({
-			pathname: '/search',
+			pathname: '/buscar',
 			query: data
 		})
 
