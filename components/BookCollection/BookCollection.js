@@ -1,6 +1,8 @@
+import Link from 'next/link'
 import styles from './BookCollection.module.css'
+
 import { useRouter } from 'next/router'
-import Image from 'next/image'
+
 
 
 export default function BookCollection({ title, authorName, genreName, slug, coverUrl }) {
@@ -19,7 +21,10 @@ export default function BookCollection({ title, authorName, genreName, slug, cov
 						<div> <span className={styles['span-title']}>Autor / Autora:</span> {authorName} </div>
 						<div> <span className={styles['span-title']}>Género:</span> {genreName} </div>
 					</div>
-					<div className={styles['button']} onClick={() => router.push(`/book/${slug}`)}>Ver detalle</div>
+					<Link href={`/libro/${slug}`}>
+						<a className={styles['button']}> Ver más información </a>
+					</Link>
+					{/* <div  onClick={() => router.push(`/book/${slug}`)}>Ver detalle</div> */}
 				</div>
 			</article>
 		</>

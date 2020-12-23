@@ -18,7 +18,7 @@ const Home = ({ books, error }) => {
   return (
     <>
       <Head>
-        <title>Wellcome to Nevook</title>
+        <title>Inicio | Nevook</title>
       </Head>
       <section className='container books-container'>
         {books && (

@@ -22,7 +22,7 @@ const Book = ({ book }) => {
 		<>
 			<Head>
 				<title> {book && book.title} | Nevook</title>
-				<meta name="description" content={`Toda la información sobre el libro ${book && book.title} de ${book && book.author.map(a => a.authorName)}`}></meta>
+				<meta name="description" content={`Aquí encontraras información sobre el libro 📒 ${book && book.title} su autor/a ✒️ ${book && book.author.map(a => a.authorName)} y su sinopsis 📜`}></meta>
 			</Head>
 
 			{
