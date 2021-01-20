@@ -12,7 +12,7 @@ const Navbar = () => {
 			<nav className={style.navbar}>
 				<Container>
 					<div className={style.navbarContent}>
-						<div style={{ color: 'white', fontSize: '2em', fontWeight: 'bold', textAlign: 'center' }}>  Nevook </div>
+						<h1 style={{ color: 'white', fontSize: '2em', fontWeight: 'bold', textAlign: 'center' }}>  Nevook </h1>
 						<div className={style.menu}>
 							<ul>
 								<li>
