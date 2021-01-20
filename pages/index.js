@@ -1,8 +1,7 @@
 
 import Head from 'next/head'
 import BookCollection from "../components/BookCollection";
-import axios from 'axios'
-
+import LazyLoad from 'react-lazyload'
 
 export const getServerSideProps = async () => {
   const response = await fetch('http://localhost:3000/api/books')
@@ -24,14 +23,16 @@ const Home = ({ books, error }) => {
         {books && (
           <>
             {books.docs.map((book) => (
-              <BookCollection
-                key={book._id}
-                slug={book.slug}
-                title={book.title}
-                authorName={book.author.map(author => author.authorName)}
-                genreName={book.genre.map(genre => genre.genreName)}
-                coverUrl={book.coverUrl}
-              />
+              <LazyLoad height={200} key={book._id} style={{ display: 'flex' }}>
+                <BookCollection
+                  slug={book.slug}
+                  title={book.title}
+                  authorName={book.author.map(author => author.authorName)}
+                  genreName={book.genre.map(genre => genre.genreName)}
+                  coverUrl={book.coverUrl}
+                  sinopsis={book.sinopsis}
+                />
+              </LazyLoad>
             ))}
           </>
         )

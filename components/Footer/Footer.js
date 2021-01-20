@@ -13,8 +13,8 @@ function Footer() {
 					<small>Tenemos muchas actualizaciones que ofreceros. Apóyanos compartiendo en redes sociales</small>
 				</div>
 				<div className={styles['footer-rrss']}>
-					<a href='https://twitter.com/nevook' target='_blank'><img src="/twitter.svg" alt="Logo Twitter | Nevook" /></a>
-					<a href='https://www.instagram.com/nevookapp/' target='_blank'><img src="/instagram.svg" alt="Logo Instagram | Nevook" /></a>
+					<a rel="noreferrer" href='https://twitter.com/nevook' target='_blank'><img src="/twitter.svg" alt="Logo Twitter | Nevook" /></a>
+					<a rel="noreferrer" href='https://www.instagram.com/nevookapp/' target='_blank'><img src="/instagram.svg" alt="Logo Instagram | Nevook" /></a>
 				</div>
 				<div className={styles['footer-copy']}>
 					© Nevook 2020. Todos los derechos reservados
