@@ -207,6 +207,21 @@
   max-width: 90%;
   margin: 0 auto;
 }
+.link{
+  display: inline-block;
+  background: var(--color-secondary);
+  padding: 8px 10px;
+  border-radius: 5px;
+  color: black;
+}
+
+.link:hover {
+  display: inline-block;
+  background: orange;
+  padding: 8px 10px;
+  border-radius: 5px;
+  color: black;
+}
 
 .search-button button {
   background-color: var(--color-primary);
@@ -221,7 +236,7 @@
 
 html,
 body {
-  background-color: var(--color-brand-catskill-white);
+  background-color: var(--color-white);
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
 }
@@ -232,42 +247,69 @@ body {
   gap: 20px;
 }
 
-@media only screen and (min-width: 768px) {
-  .books-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    min-height: 100%;
-    justify-content: center;
-  }
+.Book_info h1{
+  font-size: 1.6rem;
+  color: var(--color-gray-800);
+  margin: 10px 0;
 }
 
-@media only screen and (min-width: 1024px) {
-  .books-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    min-height: 100%;
-    justify-content: center;
-  }
+.Book_info h2{
+  font-size: 1.2rem;
+  color: var(--color-gray-500);
+  margin: 10px 0;
 }
 
-@media only screen and (min-width: 1440px) {
-  .books-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    min-height: 100%;
-    justify-content: center;
-  }
+.Container__index {
+  width: 90%  !important;
 }
 
-@media only screen and (min-width: 2560px) {
-  .books-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
-    min-height: 100%;
-    justify-content: center;
-  }
+.Container__index input {
+  height: 35px;
+  border-radius: .28571429rem;
+  border: 1px solid grey;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: grey
 }
+
+.container_share {
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+.container_search {
+  min-height: 68.1vh;
+}
+
+.sinopsis{
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: var(--color-brand-river-bed);
+}
+
+.Lista__not-found {
+  font-size: 2rem !important;
+}
+
+.container_not{
+  display: flex !important;
+  min-height: 68.1vh !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.not-found {
+  font-size: 2rem;
+}
+
+.not-found span {
+  color: var(--color-secondary);
+}
+.not-found small {
+  font-size: 1rem;
+  color: var(--color-brand-cadet-blue);
+}
+
+.active {
+  color: var(--color-secondary) !important;
+}
+
