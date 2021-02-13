@@ -4,7 +4,10 @@ import Head from 'next/head'
 import styles from '../components/BookCollection/BookCollection.module.css'
 import BookCollection from '../components/BookCollection';
 import { useForm } from 'react-hook-form';
-
+import { Button, Container, Divider, Grid, Header, Icon, Input } from 'semantic-ui-react'
+import Link from 'next/link';
+import LazyLoad from 'react-lazyload';
+import Image from 'next/image'
 
 const Search = () => {
 	const router = useRouter()
@@ -31,39 +34,62 @@ const Search = () => {
 	return (
 		<>
 			<Head>
-				<title>Búsqueda | Nevook</title>
+				<title>Busca tu siguiente libro aquí | Nevook</title>
 			</Head>
+			<Container as='section' className='Container__index container_search'>
+				<Header as='h1'>Busca libros en Nevook</Header>
+				<form onSubmit={handleSubmit(onSubmit)}>
+					<input placeholder='Busca por título' name='search' ref={register({ required: true })} />
+					{errors.search && <span>Este campo es requerido</span>}
 
-			<section className='container'>
-				<section className={styles.bookCollection}>
-					<form onSubmit={handleSubmit(onSubmit)} style={{ display: 'grid', gridTemplateColumns: '3fr 1fr', margin: '0 auto' }}>
-						<input style={{ borderRadius: '.5rem 0 0 .5rem' }} name="search" ref={register({ required: true })} placeholder="Buscar por título" />
-						<input style={{ color: 'white', backgroundColor: 'var(--color-primary)', borderRadius: '0 .5rem .5rem 0' }} type="submit" value="Buscar" />
-						{errors.search && <span>Este campo es requerido</span>}
-					</form>
-				</section>
-				<div className='search-button'>
-					<button onClick={() => router.back()} type='tertiary'>Volver atrás</button>
-				</div>
-				<section className='books-container'>
-					{books && (
-						<>
-							{books.map((book) => (
-								<BookCollection
-									key={book._id}
-									slug={book.slug}
-									title={book.title}
-									authorName={book.author.map(author => author.authorName)}
-									genreName={book.genre.map(genre => genre.genreName)}
-									coverUrl={book.coverUrl}
-								/>
-							))}
-						</>
+					<Button type='submit' >Buscar</Button>
+				</form>
+
+				<Divider hidden />
+
+				{
+					books.length === 0 && (
+						<Image src='/search_ilustration.svg' width={500} height={500} />
 					)
-					}
-				</section>
-			</section>
+				}
 
+				<Grid divided='vertically'>
+					<Grid.Row columns={4}>
+						{books && (
+							<>
+								{books.map((book) => (
+									<Grid.Column>
+										<LazyLoad height={200} key={book._id} style={{ display: 'flex' }}>
+											<BookCollection
+												slug={book.slug}
+												title={book.title}
+												authorName={book.author.map(author => author.authorName)}
+												genreName={book.genre.map(genre => genre.genreName)}
+												coverUrl={book.coverUrl}
+												sinopsis={book.sinopsis}
+											/>
+										</LazyLoad>
+									</Grid.Column>
+								))}
+							</>
+						)
+						}
+
+						{/* books.length === 0 && (
+							<>
+								<Header as='h2'>¿No has encontrado el libro?</Header>
+								<p>Estamos completando nuestra base de datos</p>
+								<p>Por favor dirígete al siguiente enlace y ayúdamos a seguir creciendo nuestra biblioteca 😀</p>
+								<Link href='/libro-no-encontrado'>
+									<a>Quiero ayudar a completar la biblioteca a Nevook</a>
+								</Link>
+							</>
+						) */}
+
+					</Grid.Row>
+				</Grid>
+
+			</Container>
 		</>
 	)
 }
