@@ -29,6 +29,15 @@ class MyDocument extends Document {
 						gtag('js', new Date());
 						gtag('config', 'G-LZ2JKDZZSZ');`
 					}} />
+					<script dangerouslySetInnerHTML={{
+						__html: `window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-LZ2JKDZZSZ');`
+					}} />
+
+					<script async defer data-domain="nevook.com" src="https://plausible.io/js/plausible.js"></script>
+
 					{/* <!-- End Google Analytics --> */}
 					<meta name="description" content="📒📘 Nevook será una red social para unir amantes de la lectura. Podrás tener un control sobre los libros que has leído y estás leyendo 📚" />
 
