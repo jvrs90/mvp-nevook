@@ -2,7 +2,7 @@ import Link from 'next/link'
 import styles from './BookCollection.module.css'
 import { useRouter } from 'next/router'
 import { Button, Card, Image, Item, Label } from 'semantic-ui-react'
-
+import LazyLoad from 'react-lazyload'
 
 export default function BookCollection({ title, authorName, genreName, sinopsis, slug, coverUrl }) {
 	const router = useRouter();
@@ -25,7 +25,9 @@ export default function BookCollection({ title, authorName, genreName, sinopsis,
 			<Item.Group divided>
 
 				<Item>
-					<Image src={coverUrl} wrapped size='small' alt={`Portada del libro ${title} | Nevook`} />
+					<LazyLoad throttle={200} height={300}>
+						<Image src={coverUrl} wrapped size='small' alt={`Portada del libro ${title} | Nevook`} />
+					</LazyLoad>
 
 					<Item.Content>
 						<Item.Header as='h2'>{title}</Item.Header>

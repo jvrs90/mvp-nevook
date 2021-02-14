@@ -1,18 +1,20 @@
 
 import Head from 'next/head'
 import BookCollection from "../components/BookCollection";
-import LazyLoad from 'react-lazyload'
-import { Grid, Container, Header, Divider } from 'semantic-ui-react';
 
-export const getServerSideProps = async () => {
-  const response = await fetch('http://localhost:3000/api/books')
-  const data = await response.json()
-  return {
-    props: {
-      books: data,
-    }
-  }
-}
+import { Grid, Container, Header, Divider, Segment, Dimmer, Loader } from 'semantic-ui-react';
+
+// export const getServerSideProps = async () => {
+//   const response = await fetch('http://localhost:3000/api/books')
+//   const data = await response.json()
+//   return {
+//     props: {
+//       books: data,
+//     }
+//   }
+// }
+
+
 
 const Home = ({ books, error }) => {
   return (
@@ -30,16 +32,15 @@ const Home = ({ books, error }) => {
             <>
               {books.docs.map((book) => (
                 <Grid.Column mobile={16} tablet={7} computer={5}>
-                  <LazyLoad height={200} key={book._id} style={{ display: 'flex' }}>
-                    <BookCollection
-                      slug={book.slug}
-                      title={book.title}
-                      authorName={book.author.map(author => author.authorName)}
-                      genreName={book.genre.map(genre => genre.genreName)}
-                      coverUrl={book.coverUrl}
-                      sinopsis={book.sinopsis}
-                    />
-                  </LazyLoad>
+                  <BookCollection
+                    key={book._id}
+                    slug={book.slug}
+                    title={book.title}
+                    authorName={book.author.map(author => author.authorName)}
+                    genreName={book.genre.map(genre => genre.genreName)}
+                    coverUrl={book.coverUrl}
+                    sinopsis={book.sinopsis}
+                  />
                 </Grid.Column>
               ))}
             </>
@@ -51,6 +52,16 @@ const Home = ({ books, error }) => {
 
     </>
   );
+}
+
+export const getServerSideProps = async () => {
+  const response = await fetch('http://localhost:3000/api/books')
+  const data = await response.json()
+  return {
+    props: {
+      books: data,
+    }
+  }
 }
 
 export default Home;

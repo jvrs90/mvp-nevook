@@ -8,9 +8,7 @@ const Navbar = () => {
 	const router = useRouter();
 	const { pathname } = useRouter();
 
-	const showModal = () => {
-		console.log('Modal')
-	}
+	console.log(router);
 	return (
 		<>
 			<nav className={style.navbar}>
