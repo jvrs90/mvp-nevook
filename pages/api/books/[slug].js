@@ -6,7 +6,7 @@ async function getBookBySlug(req, res) {
 	if (response) {
 		res.json(response);
 	} else {
-		res.json({});
+		res.status(404);
 	}
 }
 

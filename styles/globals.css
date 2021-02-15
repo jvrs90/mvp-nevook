@@ -278,7 +278,7 @@ body {
 }
 
 .container_search {
-  min-height: 68.1vh;
+  min-height: calc(100vh - (210px + 99px));
 }
 
 .sinopsis{
@@ -293,7 +293,7 @@ body {
 
 .container_not{
   display: flex !important;
-  min-height: 68.1vh !important;
+  min-height: calc(100vh - (210px + 99px)) !important;
   justify-content: center !important;
   align-items: center !important;
 }
@@ -313,3 +313,10 @@ body {
   color: var(--color-secondary) !important;
 }
 
+.not-found-container {
+  min-height: calc(100vh - (210px + 99px));
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color: var(--color-secondary);
+}

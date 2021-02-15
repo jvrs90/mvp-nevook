@@ -4,18 +4,6 @@ import BookCollection from "../components/BookCollection";
 
 import { Grid, Container, Header, Divider, Segment, Dimmer, Loader } from 'semantic-ui-react';
 
-// export const getServerSideProps = async () => {
-//   const response = await fetch('http://localhost:3000/api/books')
-//   const data = await response.json()
-//   return {
-//     props: {
-//       books: data,
-//     }
-//   }
-// }
-
-
-
 const Home = ({ books, error }) => {
   return (
     <>
@@ -56,10 +44,10 @@ const Home = ({ books, error }) => {
 
 export const getServerSideProps = async () => {
   const response = await fetch('http://localhost:3000/api/books')
-  const data = await response.json()
+  const books = await response.json()
   return {
     props: {
-      books: data,
+      books
     }
   }
 }

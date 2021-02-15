@@ -7,8 +7,6 @@ import style from './Navbar.module.css'
 const Navbar = () => {
 	const router = useRouter();
 	const { pathname } = useRouter();
-
-	console.log(router);
 	return (
 		<>
 			<nav className={style.navbar}>
